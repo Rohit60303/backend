@@ -12,7 +12,7 @@ const server = http.createServer(app);
 // Enhanced Socket.IO configuration
 const io = socketIo(server, {
   cors: {
-    origin: "https://cowrite-three.vercel.app",
+    origin: "https://cowrite-git-main-bhupathiraju-rohit-varmas-projects.vercel.app?_vercel_share=w4Pat52jNsO0ZbGS6AmyGVPbG3mmxBFA",
     methods: ["GET", "POST"]
   },
   pingInterval: 5000,
@@ -20,7 +20,7 @@ const io = socketIo(server, {
 });
 
 app.use(cors((
-  origin: "https://cowrite-three.vercel.app",
+  origin: "https://cowrite-git-main-bhupathiraju-rohit-varmas-projects.vercel.app?_vercel_share=w4Pat52jNsO0ZbGS6AmyGVPbG3mmxBFA",
   methods: ["GET", "POST", "PUT"],
   credentials: true
 ));
