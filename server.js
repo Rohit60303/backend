@@ -19,11 +19,11 @@ const io = socketIo(server, {
   pingTimeout: 3000
 });
 
-app.use(cors((
+app.use(cors({
   origin: "https://cowrite-git-main-bhupathiraju-rohit-varmas-projects.vercel.app?_vercel_share=w4Pat52jNsO0ZbGS6AmyGVPbG3mmxBFA",
   methods: ["GET", "POST", "PUT"],
   credentials: true
-));
+});
 app.use(express.json());
 
 // MongoDB connection
