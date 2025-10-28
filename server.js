@@ -20,7 +20,7 @@ const io = socketIo(server, {
 });
 
 app.use(cors((
-  origin: "cowrite-three.vercel.app",
+  origin: "https://cowrite-three.vercel.app",
   methods: ["GET", "POST", "PUT"],
   credentials: true
 ));
