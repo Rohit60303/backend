@@ -12,7 +12,7 @@ const server = http.createServer(app);
 // Enhanced Socket.IO configuration
 const io = socketIo(server, {
   cors: {
-    origin: "cowrite-three.vercel.app",
+    origin: "https://cowrite-three.vercel.app",
     methods: ["GET", "POST"]
   },
   pingInterval: 5000,
