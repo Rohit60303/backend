@@ -12,14 +12,18 @@ const server = http.createServer(app);
 // Enhanced Socket.IO configuration
 const io = socketIo(server, {
   cors: {
-    origin: "http://localhost:3000",
+    origin: "cowrite-three.vercel.app",
     methods: ["GET", "POST"]
   },
   pingInterval: 5000,
   pingTimeout: 3000
 });
 
-app.use(cors());
+app.use(cors((
+  origin: "cowrite-three.vercel.app",
+  methods: ["GET", "POST", "PUT"],
+  credentials: true
+));
 app.use(express.json());
 
 // MongoDB connection
