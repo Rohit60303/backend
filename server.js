@@ -9,10 +9,11 @@ const Document = require('./models/Document');
 const app = express();
 const server = http.createServer(app);
 
+const VERCEL_FRONTEND_URL = "https://cowrite.vercel.app";
 // Enhanced Socket.IO configuration
 const io = socketIo(server, {
   cors: {
-    origin: "https://cowrite-9glbmss694-bhupathiraju-rohit-varmas-projects.vercel.app",
+    origin: VERCEL_FRONTEND_URL,
     methods: ["GET", "POST"]
   },
   pingInterval: 5000,
@@ -20,7 +21,7 @@ const io = socketIo(server, {
 });
 
 app.use(cors({
-  origin: "https://cowrite-9glbmss694-bhupathiraju-rohit-varmas-projects.vercel.app",
+  origin: VERCEL_FRONTEND_URL,
   methods: ["GET", "POST", "PUT"],
   credentials: true
 }));
